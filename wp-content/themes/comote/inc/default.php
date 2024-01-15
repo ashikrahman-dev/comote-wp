@@ -9,6 +9,8 @@
 
 // Theme title
 add_theme_support('title-tag');
+// Custom logo
+add_theme_support('custom-logo');
 
 
 // Add posts thumbnail

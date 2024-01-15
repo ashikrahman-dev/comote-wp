@@ -11,8 +11,6 @@ get_header();
 ?>
 
 
-
-
     <!-- banner -->
     <section class="banner py-5 py-lg-0">
         <div class="container">

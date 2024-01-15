@@ -29,8 +29,14 @@
     <header class="header py-2 py-lg-4">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo.svg" alt="logo" class="img-fluid" />
+                <a class="navbar-brand" href="<?php echo home_url(); ?>">
+                    <?php 
+                        if (has_custom_logo()) {
+                            the_custom_logo();
+                        } else {
+                            echo "<h1>".get_bloginfo('name')."</h1>";
+                        }
+                    ?>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggle"
                     aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,40 +51,19 @@
                         </button>
                     </div>
                     <div class="navbar-logo d-block d-lg-none mb-3">
-                        <a class="navbar-brand d-inline-block d-lg-none" href="index.html">
-                            <img src="assets/img/logo.svg" alt="img" class="img-fluid" />
+                        <a class="navbar-brand d-inline-block d-lg-none" href="<?php echo home_url(); ?>">
+                            <?php 
+                                if (has_custom_logo()) {
+                                    the_custom_logo();
+                                } else {
+                                    echo "<h1>".get_bloginfo('name')."</h1>";
+                                }
+                            ?>
                         </a>
                     </div>
-                    <ul class="navbar-nav ms-auto mb-2 align-items-lg-center  mb-lg-0">
-                        <li class="nav-item mb-1 mb-lg-0">
-                            <a class="nav-link mx-2" href="#">
-                                <span data-content="Home">Home</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-1 mb-lg-0">
-                            <a class="nav-link mx-2" href="#">
-                                <span data-content="About Us">About Us</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-1 mb-lg-0">
-                            <a class="nav-link mx-2" href="#">
-                                <span data-content="Services">Services</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-1 mb-lg-0">
-                            <a class="nav-link mx-2" href="#">
-                                <span data-content="Blog">Blog</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-1 mb-lg-0">
-                            <a class="nav-link mx-2" href="#">
-                                <span data-content="Contact">Contact</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-2 mb-lg-0">
-                            <a class="nav-link mx-2 btn btn-talk rounded-0 is-hover" href="#">Lets Talk</a>
-                        </li>
-                    </ul>
+                    <div class="ms-auto my-2 my-lg-0 header-menu-wrap">
+                        <?php wp_nav_menu(array('theme_location' => 'header_top_menu', 'menu_class' => 'navbar-nav ms-auto mb-2 align-items-lg-center mb-lg-0')) ?>
+                    </div>
                 </div>
             </nav>
         </div>

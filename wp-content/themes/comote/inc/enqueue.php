@@ -9,7 +9,7 @@
 
 
 // Theme CSS and JS file calling.
-function uum_css_js_file_calling()
+function comote_css_js_file_calling()
 {
     //Style CSS
     wp_enqueue_style('comote-style', get_stylesheet_uri());
@@ -22,7 +22,7 @@ function uum_css_js_file_calling()
     // Owl carousel theme CSS register
     wp_register_style('owl-carousel-theme-css', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css', array(), '2.3.4', 'all');
     // Theme CSS register
-    wp_register_style('theme-css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0', 'all');
+    wp_register_style('theme-css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.1', 'all');
 
     // Nioicon CSS enqueue
     wp_enqueue_style('nioicon');
@@ -49,13 +49,13 @@ function uum_css_js_file_calling()
     wp_enqueue_script('main-js', get_theme_file_uri() . '/assets/js/script.js', array('jquery'), '1.0.0', true);
 }
 
-add_action('wp_enqueue_scripts', 'uum_css_js_file_calling');
+add_action('wp_enqueue_scripts', 'comote_css_js_file_calling');
 
 
 
 // Google fonts
-// function uum_add_google_fonts()
-// {
-//     wp_enqueue_style('uum_google_font', 'https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap', false);
-// }
-// add_action('wp_enqueue_scripts', 'uum_add_google_fonts');
+function comote_add_google_fonts()
+{
+    wp_enqueue_style('uum_google_font', 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap', false);
+}
+add_action('wp_enqueue_scripts', 'comote_add_google_fonts');

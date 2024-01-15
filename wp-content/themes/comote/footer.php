@@ -9,24 +9,24 @@
                     <div class="col-xl-4 col-sm-6">
                         <div class="footer-widget">
                             <a href="index.html" class="widget-title d-inline-block text-theme-blue mb-4">
-                                <img src="assets/img/logo.svg" alt="logo" class="img-fluid" />
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="logo" class="img-fluid" />
                             </a>
                             <ul class="widget-links widget-address list-unstyled">
                                 <li class="mb-2">
                                     <a href="#">
-                                        <img src="assets/img/map.svg" alt="icon" class="img-fluid imgIcon" />
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/map.svg" alt="icon" class="img-fluid imgIcon" />
                                         935 Allen Way, Yuba City <br class="d-none d-sm-inline"> CA, USA.
                                     </a>
                                 </li>
                                 <li class="mb-2">
                                     <a href="#">
-                                        <img src="assets/img/skype.svg" alt="icon" class="img-fluid imgIcon" />
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/skype.svg" alt="icon" class="img-fluid imgIcon" />
                                         comote564
                                     </a>
                                 </li>
                                 <li class="mb-2">
                                     <a href="#">
-                                        <img src="assets/img/mail.svg" alt="icon" class="img-fluid imgIcon" />
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mail.svg" alt="icon" class="img-fluid imgIcon" />
                                         uremail@gmail.com
                                     </a>
                                 </li>
@@ -58,45 +58,15 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="footer-widget">
                             <h3 class="widget-title text-theme-blue mb-4">Company</h3>
-                            <ul class="widget-links list-unstyled">
-                                <li class="mb-2">
-                                    <a href="#">About Company</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#">Support</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#">Product Sourcing</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#">Terms and Conditions</a>
-                                </li>
-                            </ul>
+
+                            <?php wp_nav_menu(array('theme_location' => 'footer_menu_1', 'menu_class' => 'widget-links list-unstyled footer-widget-links-wrap')) ?>
+                            
                         </div>
                     </div>
                     <div class="col-xl-2 col-sm-6">
                         <div class="footer-widget">
                             <h3 class="widget-title text-theme-blue mb-4">Quick Links</h3>
-                            <ul class="widget-links list-unstyled">
-                                <li class="mb-2">
-                                    <a href="#">Home</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#">About us</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#">Services</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#">Blog</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#">Contact</a>
-                                </li>
-                            </ul>
+                            <?php wp_nav_menu(array('theme_location' => 'footer_menu_2', 'menu_class' => 'widget-links list-unstyled footer-widget-links-wrap')) ?>
                         </div>
                     </div>
                 </div>
