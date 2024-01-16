@@ -19,3 +19,7 @@ require_once('inc/menu-register.php');
 
 //All Theme function
 require_once('inc/theme-function.php');
+
+
+
+

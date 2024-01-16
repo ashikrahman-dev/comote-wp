@@ -15,7 +15,7 @@ get_header();
 
 
 
-This is single page
+<?php the_content(); ?>
 
 
 
